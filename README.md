@@ -2,14 +2,6 @@
 
 A modern Rust backend application built with Axum web framework.
 
-## Features
-
-- 🚀 **Fast & Modern**: Built with Axum, one of the fastest Rust web frameworks
-- 🔍 **Structured Logging**: Integrated tracing for comprehensive logging
-- 🌐 **CORS Support**: Cross-origin resource sharing enabled
-- 📊 **Health Checks**: Built-in health monitoring endpoint
-- 🔧 **Easy to Extend**: Clean, modular code structure
-
 ## Prerequisites
 
 - [Rust](https://rustup.rs/) (latest stable version)
@@ -32,7 +24,7 @@ A modern Rust backend application built with Axum web framework.
    cargo run
    ```
 
-4. **The server will start on:** `http://localhost:3000`
+4. **The server will start on:** `http://localhost:8000`
 
 ## API Endpoints
 
@@ -55,13 +47,13 @@ A modern Rust backend application built with Axum web framework.
 
 ```bash
 # Check if the server is running
-curl http://localhost:3000/health
+curl http://localhost:8000/health
 
 # Get welcome message
-curl http://localhost:3000/
+curl http://localhost:8000/
 
 # Test echo endpoint
-curl "http://localhost:3000/echo?name=John&age=30"
+curl "http://localhost:8000/echo?name=John&age=30"
 ```
 
 ## Development
@@ -108,7 +100,7 @@ agent-axum/
 
 ## Configuration
 
-The server runs on `0.0.0.0:3000` by default. To change the port or host, modify the `TcpListener::bind()` call in `main.rs`.
+The server runs on `127.0.0.1:8000` by default. To change the port or host, modify the `TcpListener::bind()` call in `main.rs`.
 
 ## Logging
 
